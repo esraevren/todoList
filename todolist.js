@@ -1,4 +1,5 @@
 
+
 //LİSTEYE YENİ ELEMAN EKLEME
 let liDom=document.getElementById("list");
 let selectInput=document.getElementById("task");
@@ -37,6 +38,7 @@ for(let i=0; i<selectAll.length; i++) {
     span.appendChild(text);//çarpı işareti append edildi
     selectAll[i].append(span); //tüm li elemanlarına span append edildi
     span.onclick=silmeBtn;// onclick ile butona basıldığında silmeBtn fonk eklendi 
+    selectAll[i].onclick=check;
 }
 
 function silmeBtn() {
@@ -44,5 +46,10 @@ function silmeBtn() {
 }
 }
 newLiAdd()
+
+function check(){
+    this.classList.toggle("checked"); 
+  }
+
 
 
